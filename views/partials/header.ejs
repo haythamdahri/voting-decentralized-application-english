@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+        <img src="/images/blockchain-3277336_1280-678x381.png" style="border-radius: 100%" width="30" height="30"
+            class="d-inline-block align-top" alt="">
+        Blockchain vote
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/"><i class="fas fa-home"></i> Acceuil <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <% if( address == undefined ) { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+                </li>
+            <% } else { %>
+                <li class="nav-item">
+                    <form method="POST" action="/banking">
+                        <a class="nav-link" href="/banking"><i class="fas fa-money-check-alt"></i> Banque</a>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor: pointer;"><i class="far fa-user"></i> <%= address %></a>
+                </li>
+                <li class="nav-item">
+                    <form method="POST" action="/logout" id="disconnect">
+                        <a class="nav-link" style="cursor: pointer;" onclick="document.getElementById('disconnect').submit()"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</nav>

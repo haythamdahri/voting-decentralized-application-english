@@ -1,0 +1,33 @@
+{
+  "name": "voting-decentralized-application",
+  "version": "1.0.0",
+  "description": "Voting decentralized application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "author": "HAYTHAM DAHRI",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cookies": "^0.7.3",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-flash": "0.0.2",
+    "express-session": "^1.16.1",
+    "foreachasync": "^5.1.3",
+    "jimp": "^0.6.4",
+    "js-sha512": "^0.8.0",
+    "mime-types": "^2.1.24",
+    "solc": "^0.4.25",
+    "web3": "^0.20.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

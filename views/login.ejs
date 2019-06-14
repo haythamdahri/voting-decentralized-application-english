@@ -1,0 +1,30 @@
+<div class="card mt-5">
+    <div class="card-header">
+        <i class="fas fa-cubes"></i> Connexion
+    </div>
+    <div class="alert alert-danger" style="display: none" id="login-error-message">
+        <i class="fas fa-exclamation"></i> Veuillez saisir des données valides!
+    </div>
+    <div class="card-body">
+        <!-- show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong><i class="fas fa-exclamation"></i></strong> <%= message %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <% } %>
+        <h5 class="card-title"><i class="far fa-id-card"></i> Veuillez se connecter avec vos identifiants</h5>
+        <p class="card-text">
+            <form method="POST" action="/login">
+                <div class="form-group">
+                    <label for="user-address"><i class="fas fa-address-book"></i> Adresse du blockchain:</label>
+                    <input type="text" required="true" class="form-control" name="address" id="user-address"
+                        placeholder="Saisir votre adresse..">
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Se connecter</button>
+            </form>
+        </p>
+    </div>
+</div>

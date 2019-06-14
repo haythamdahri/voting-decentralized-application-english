@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="./static/css/all.min.css" />
+
+  <!-- Sweetalert CSS -->
+  <link rel="stylesheet" href="./static/css/sweetalert2.min.css" />
+
+  <link rel="icon"
+    href="./static/images/41503743-security-guard-logo-design-vector-security-protection-shield-symbol-secure-shield-icon-vector-privac.jpg" />
+
+  <title>Application Decentralisée</title>
+</head>
+
+<body style="display: none;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      <img src="./static/images/blockchain-3277336_1280-678x381.png" style="border-radius: 100%" width="30" height="30"
+        class="d-inline-block align-top" alt="">
+      Blockchain vote
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/"><i class="fas fa-home"></i> Acceuil <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" id="disconnect-link" style="cursor: pointer;"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+
+  <div class="container">
+
+
+    <div class="card mb-5 mt-5" id="main-component">
+      <div class="card-header">
+        <h1 class="text-center display-4" id="title">Application du vote decentralisée</h1>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><i class="fas fa-list"></i> Liste des candidats</h5>
+        <p class="card-text">
+
+
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead align="center">
+                <tr>
+                  <th scope="col"><i class="fas fa-user-shield"></i> Candidat</th>
+                  <th scope="col"><i class="fas fa-globe-asia"></i> Votes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Rama</td>
+                  <td id="candidate-1"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Nick</td>
+                  <td id="candidate-2"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Jose</td>
+                  <td id="candidate-3"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Navin</td>
+                  <td id="candidate-4"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Mike</td>
+                  <td id="candidate-5"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Pamela</td>
+                  <td id="candidate-6"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Thierry</td>
+                  <td id="candidate-7"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Susanne</td>
+                  <td id="candidate-8"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Matilda</td>
+                  <td id="candidate-9"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Angelique</td>
+                  <td id="candidate-10"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Marcelle</th>
+                  <td id="candidate-11"></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="form-group">
+            <label for="candidate">Nom du candidat: </label>
+            <input type="email" class="form-control" id="candidate" aria-describedby="candidatHelp"
+              placeholder="Nom du candidat...">
+            <small id="candidatHelp" class="form-text text-muted">Taper le nom du candidat</small>
+          </div>
+
+          <button onclick="voteForCandidate()" id="btn-voter" class="btn btn-primary">
+            <i class="fas fa-person-booth"></i> Voter
+          </button>
+
+
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+</body>
+<script src="./static/js/web3.js"></script>
+<script src="./static/js/jquery.min.js"></script>
+<script src="./static/js/bootstrap.min.js"></script>
+<script src="./static/js/all.min.js"></script>
+<script src="./static/js/sweetalert2.all.min.js"></script>
+<script src="./index.js" async></script>
+<script src="./static/js/cookie.min.js" async></script>
+<script src="./static/js/custom.js"></script>
+
+</html>

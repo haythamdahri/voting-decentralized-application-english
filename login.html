@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="./static/css/all.min.css" />
+
+    <!-- Sweetalert CSS -->
+    <link rel="stylesheet" href="./static/css/sweetalert2.min.css" />
+
+    <link rel="icon"
+        href="./static/images/41503743-security-guard-logo-design-vector-security-protection-shield-symbol-secure-shield-icon-vector-privac.jpg" />
+
+    <title>Application Decentralisée</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="./static/images/blockchain-3277336_1280-678x381.png" style="border-radius: 100%" width="30"
+                height="30" class="d-inline-block align-top" alt="">
+            Blockchain vote
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Acceuil <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+
+    <div class="container">
+
+        <div class="card mt-5">
+            <div class="card-header">
+                Connexion
+            </div>
+            <div class="alert alert-danger" style="display: none" id="login-error-message">
+                <i class="fas fa-exclamation"></i> Veuillez saisir des données valides!
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Veuillez se connecter avec vos identifiants</h5>
+                <p class="card-text">
+                    <form onsubmit="login(event);">
+                        <div class="form-group">
+                            <label for="user-email">Adresse email:</label>
+                            <input type="email" required="true" class="form-control" id="user-email" aria-describedby="emailHelp"
+                                placeholder="Saisir votre email">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-password">Mot de passe:</label>
+                            <input type="password" required="true" class="form-control" id="user-password"
+                                placeholder="Saisir votre mot de passe">
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Se connecter</button>
+                    </form>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    </div>
+</body>
+<script src="./static/js/web3.js"></script>
+<script src="./static/js/jquery.min.js"></script>
+<script src="./static/js/bootstrap.min.js"></script>
+<script src="./static/js/all.min.js"></script>
+<script src="./static/js/sweetalert2.all.min.js"></script>
+<script src="./static/js/cookie.min.js"></script>
+<script src="./script.js"></script>
+
+</html>

@@ -1,0 +1,41 @@
+<div class="row">
+
+    <div class="col-12 mt-4 mb-2">
+        <% if( voted != undefined ) { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong><i class="fas fa-exclamation-circle"></i> </strong> <%= voted %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <% } else if( success != undefined ) { %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong><i class="fas fa-check-double"></i> </strong> <%= success %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <% } %>
+    </div>
+
+    <% candidates.forEach((candidate) => { %>
+    <div class="col-12 mt-4 mb-2">
+        <div class="card">
+            <h5 class="card-header"><i class="far fa-id-badge"></i> <%= candidate.candidateName %></h5>
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-flag"></i> Nombre des votes reçus</h5>
+                <p class="card-text">
+                    <h3>
+                        <i class="fas fa-sort-numeric-up"></i>
+                        <small class="text-muted"><%= candidate.votesCount %> votes</small>
+                    </h3>
+                </p>
+                <form action="/" method="POST">
+                    <input type="hidden" name="candidate" value="<%= candidate.candidateName %>" />
+                    <button class="btn btn-primary bt-sm"><i class="fas fa-person-booth"></i> Voter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+</div>
