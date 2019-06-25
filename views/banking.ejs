@@ -1,9 +1,9 @@
 <div class="card mt-5">
   <div class="card-header">
-    <i class="fas fa-money-check-alt"></i>  Montant du compte
+    <i class="fas fa-money-check-alt"></i>  Account balance
   </div>
   <div class="card-body">
-    <h5 class="card-title"><i class="fas fa-file-signature"></i> Saisir un montant à transferer</h5>
+    <h5 class="card-title"><i class="fas fa-file-signature"></i> Fill the desired amount to send</h5>
     <p class="card-text">
     <% if( message.length > 0 ) { %>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -16,10 +16,10 @@
 
     <form method="POST" action="/banking">
     <div class="form-group">
-        <label><i class="fab fa-battle-net"></i> Montant</label>
+        <label><i class="fab fa-battle-net"></i> Amount</label>
         <input autofocus type="number" class="form-control" name="amount" placeholder="Saisir le motant" required="true" />
     </div>
-    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Envoyer</button>
+    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Send</button>
     </form>
     </p>
     <small class="text-muted"><i class="fas fa-money-bill-alt"></i> <%= balance %> Dhs</small>

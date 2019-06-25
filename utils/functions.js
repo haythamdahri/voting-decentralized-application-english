@@ -100,9 +100,9 @@ const checkHeadNode = async web3 => {
 };
 
 let drowWinnerImage = async winnerName => {
-  let fileName = 'public/images/golden-laurel-wreath.jpg'; //a 1024px x 1024px backgroound image
-  let exportedFileName = 'public/images/winner-image.jpg';
-  let winnerFileName = '/images/winner-image.jpg';
+  let fileName = 'public/images/golden-laurel-wreath.png'; //a 1024px x 1024px backgroound image
+  let exportedFileName = 'public/images/winner-image.png';
+  let winnerFileName = '/images/winner-image.png';
 
   await Jimp.read(fileName)
     .then(function(image) {

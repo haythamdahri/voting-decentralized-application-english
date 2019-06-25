@@ -1,9 +1,9 @@
 <div class="card mt-5">
     <div class="card-header">
-        <i class="fas fa-cubes"></i> Connexion
+        <i class="fas fa-cubes"></i> User authentication
     </div>
     <div class="alert alert-danger" style="display: none" id="login-error-message">
-        <i class="fas fa-exclamation"></i> Veuillez saisir des données valides!
+        <i class="fas fa-exclamation"></i> Please fill valid data!
     </div>
     <div class="card-body">
         <!-- show any messages that come back with authentication -->
@@ -15,15 +15,15 @@
                 </button>
             </div>
         <% } %>
-        <h5 class="card-title"><i class="far fa-id-card"></i> Veuillez se connecter avec vos identifiants</h5>
+        <h5 class="card-title"><i class="far fa-id-card"></i> Please connect with your identity</h5>
         <p class="card-text">
             <form method="POST" action="/login">
                 <div class="form-group">
-                    <label for="user-address"><i class="fas fa-address-book"></i> Adresse du blockchain:</label>
+                    <label for="user-address"><i class="fas fa-address-book"></i> blockchain address:</label>
                     <input type="text" required="true" class="form-control" name="address" id="user-address"
-                        placeholder="Saisir votre adresse..">
+                        placeholder="Your address..">
                 </div>
-                <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Se connecter</button>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
             </form>
         </p>
     </div>
